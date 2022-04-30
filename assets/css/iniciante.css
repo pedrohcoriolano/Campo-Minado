@@ -1,0 +1,25 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: lightgreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+input {
+    width: 50px;
+    height: 50px;
+    border: 1px solid rgba(0, 0, 0, 0.383);
+    background-color: rgb(130, 69, 32);
+}
+
+input:hover {
+    cursor: pointer;
+}
