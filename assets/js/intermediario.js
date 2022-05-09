@@ -22,12 +22,12 @@ function tempo() {
 
 function imprimir() {
     
-    for (var contador_linhas = 0; contador_linhas < 8; contador_linhas++) {
+    for (var contador_linhas = 0; contador_linhas < 14; contador_linhas++) {
         tabuleiro[contador_linhas] = []
     }
     
-    for (var contador_linhas = 0; contador_linhas < 8; contador_linhas++) {
-        for (var contador_colunas = 0; contador_colunas < 10; contador_colunas++) {
+    for (var contador_linhas = 0; contador_linhas < 14; contador_linhas++) {
+        for (var contador_colunas = 0; contador_colunas < 18; contador_colunas++) {
 
             tabuleiro[contador_linhas][contador_colunas] = `<input type="button" value=" " id='item${contador_linhas}-${contador_colunas}' onclick='tecla_apertada(${contador_linhas},${contador_colunas})' oncontextmenu='alerta(${contador_linhas},${contador_colunas})'></input>`
             
@@ -77,9 +77,9 @@ var vezes = 0
 function gerar(botao) {
     primeiro_clique = 1
     
-    while (vezes < 10) {
-        var num_ale = Math.floor(Math.random()*8)
-        var num_ale2 = Math.floor(Math.random()*10)
+    while (vezes < 40) {
+        var num_ale = Math.floor(Math.random()*14)
+        var num_ale2 = Math.floor(Math.random()*18)
 
         var botao_aleatorio = document.querySelector(`#item${num_ale}-${num_ale2}`)
 
@@ -94,8 +94,8 @@ function gerar(botao) {
         }
     }
 
-    for (var i = 0; i < 8; i++) {
-        for (var j = 0; j < 10; j++) {
+    for (var i = 0; i < 14; i++) {
+        for (var j = 0; j < 18; j++) {
             if(document.querySelector(`#item${i}-${j}`).value == '#'){
                 if(document.querySelector(`#item${i-1}-${j-1}`) !== null && document.querySelector(`#item${i-1}-${j-1}`).value !== '#') {
                     document.querySelector(`#item${i-1}-${j-1}`).value++
@@ -155,7 +155,7 @@ function limpar(n1,n2) {
     if (document.querySelector(`#item${n1}-${n2}`).value == " ") {
         for (var i =  n1-1; i <= n1+1; i++) {
             for (var j = n2-1; j <= n2+1; j++) {
-                if(i >= 0 && i < 8 && j >= 0 && j < 10){
+                if(i >= 0 && i < 14 && j >= 0 && j < 18){
                     var botaoo = document.querySelector(`#item${i}-${j}`)
                     if (botaoo.className !== 'aberto' && botaoo !== null) {
                         botaoo.className = 'aberto'
@@ -170,7 +170,7 @@ function limpar(n1,n2) {
             }
         }
     }
-    if (lista_botao_achados.length == 70) {
+    if (lista_botao_achados.length == 212) {
         ganhou()
     }
 }
