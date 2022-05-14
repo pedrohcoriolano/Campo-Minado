@@ -136,6 +136,7 @@ function gerar(botao) {
 
 function bomba(lista, num1, num2) {
     if (lista.includes(document.querySelector(`#item${num1}-${num2}`))) {
+        document.querySelector(`#item${num1}-${num2}`).style.backgroundColor = 'darkred';
         perdeu()
     } else {
         limpar(num1,num2) 
