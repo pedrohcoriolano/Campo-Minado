@@ -10,5 +10,5 @@ O jogo conta com 3 dificuldades:  Iniciante, Intermediário e Avançado.
 
 Com as seguintes regras:
 - Se o jogador escolher um lugar com uma mina, o jogo acaba.
-- Se o lugar escolhido tiver em branco, o jogo continua e limpa até formar uma borda de números
-- Se o campo escololhido apresentar um número, esse número informará quantas minas estão proximas do local
+- Se o lugar escolhido tiver em branco, o jogo continua e limpa até formar uma borda de números.
+- Se o quadrado escolhido apresentar um número, esse número informará quantas minas estão escondidas no seus 8 lados.
