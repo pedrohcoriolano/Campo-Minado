@@ -1,7 +1,9 @@
 # Campo-Minado
  Jogo campo minado desenvolvido para as disciplinas de Algoritimo e Programação de Software. 
  
- GRUPO: Pedro Coriolano, Lucas Mafra e Leonardo Bernardes
+ GRUPO: Pedro Coriolano, Lucas Mafra e Leonardo 
+ 
+ Professores: Pedro Girotto e Ricardo Casseb
 
 O jogo conta com 3 dificuldades:  Iniciante, Intermediário e Avançado.
 - Iniciante: tabuleiro 8x10 que apresenta 10 minas.
