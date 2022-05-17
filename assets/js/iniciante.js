@@ -44,9 +44,13 @@ function imprimir() {
 
 var primeiro_clique = 0
 
+document.addEventListener('contextmenu', (evento) => {
+    evento.preventDefault()
+})
+
 function alerta(n1,n2) {
-    document.querySelector(`#item${n1}-${n2}`).classList.toggle('aqui')
-    if (document.querySelector(`#item${n1}-${n2}`).classList == 'aqui') {
+    document.querySelector(`#item${n1}-${n2}`).classList.toggle('bandeira')
+    if (document.querySelector(`#item${n1}-${n2}`).classList == 'bandeira') {
         document.querySelector(`#item${n1}-${n2}`).style.backgroundColor = 'red'
         document.querySelector(`#item${n1}-${n2}`).style.color = 'red'
     } else {
@@ -56,9 +60,6 @@ function alerta(n1,n2) {
 }
 
 
-document.addEventListener('contextmenu', (event) => {
-    event.preventDefault()
-})
 
 function tecla_apertada (num1, num2) {
     var botao_escolhido = document.querySelector(`#item${num1}-${num2}`)
@@ -157,13 +158,13 @@ function limpar(n1,n2) {
         for (var i =  n1-1; i <= n1+1; i++) {
             for (var j = n2-1; j <= n2+1; j++) {
                 if(i >= 0 && i < 8 && j >= 0 && j < 10){
-                    var botaoo = document.querySelector(`#item${i}-${j}`)
-                    if (botaoo.className !== 'aberto' && botaoo !== null) {
-                        botaoo.className = 'aberto'
-                        botaoo.style.backgroundColor = 'darkgreen'
-                        botaoo.disabled = true
-                        if (!lista_botao_achados.includes(botaoo)) {
-                            lista_botao_achados.push(botaoo)
+                    var quadrado = document.querySelector(`#item${i}-${j}`)
+                    if (quadrado.className !== 'aberto' && quadrado !== null) {
+                        quadrado.className = 'aberto'
+                        quadrado.style.backgroundColor = 'darkgreen'
+                        quadrado.disabled = true
+                        if (!lista_botao_achados.includes(quadrado)) {
+                            lista_botao_achados.push(quadrado)
                         }
                         limpar(i,j)
                     } 
